@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Grid de la página */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "menu main"
+    "footer footer";
+  grid-template-rows: 1fr 8fr 1fr;
+  grid-template-columns: 1fr 4fr;
+  height: 100vh;
+}
+
+/* Encabezado */
+.header {
+  grid-area: header;
+  /* background: linear-gradient(0.25turn, #000000, #2c3e50); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: #000000;
+}
+
+/* Menú lateral izquierdo */
+.menu {
+  grid-area: menu;
+  background-color: #0057fe;
+  display: flex;
+  flex-direction: column;
+  padding: 5% 15%;
+}
+.menu h2,
+.menu a {
+  color: #ffffff;
+}
+.menu a {
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+  transition: 0.15s ease;
+}
+.menu a:hover {
+  color: #b8b8b8;
+}
+
+/* Contenido principal- Grilla de productos */
+.main {
+  grid-area: main;
+  background-color: rgb(185, 197, 215);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  overflow: auto;
+}
+
+/* Cards/Productos */
+.product {
+  background-color: #ffffff;
+  display: flex;
+  margin: 3% 10%;
+  flex-direction: column;
+  border-radius: 10px;
+  height: 500px;
+  width: 400px;
+  transition: 0.3s ease;
+}
+.product:hover {
+  scale: 1.02;
+}
+.product-img {
+  flex-grow: 1;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.product-info {
+  background-color: #ffffff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: end;
+  border-radius: 10px;
+}
+.product-info h3,
+.product-info h5 {
+  margin: 1.5%;
+}
+.product-info h5 {
+  font-weight: 500;
+}
+.product-info button {
+  width: 100%;
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 10px 0;
+  border: none;
+  border-radius: 0 0 10px 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.product-info button:hover {
+  background-color: #0056b3;
+}
+/* Imagenes para los productos */
+.product-img.img1 {
+  background-image: url(../img/xiaomi-14u.jpg);
+}
+.product-img.img2 {
+  background-image: url(../img/samsung-s23.jpg);
+}
+.product-img.img3 {
+  background-image: url(../img/oneplus12.jpg);
+}
+.product-img.img4 {
+  background-image: url(../img/vivo-x100u.jpg);
+}
+.product-img.img5 {
+  background-image: url(../img/Pixel8Pro.jpeg);
+}
+.product-img.img6 {
+  background-image: url(../img/mi9.webp);
+}
+.product-img.img7 {
+  background-image: url(../img/s24u.jpg);
+}
+
+/* Pie de pagina */
+.footer {
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer h5 {
+  color: #000000;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
